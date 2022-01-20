@@ -3,10 +3,8 @@ class Solution {
         int maxP = 0;
         int minP = Integer.MAX_VALUE;
         for(int i : prices){
-            if (minP > i)
-                minP = i;
-            else if(maxP < (i-minP))
-                maxP = i - minP;
+            minP = Math.min(minP, i);
+            maxP = Math.max(maxP, i - minP);
         }
          return maxP;
     }
