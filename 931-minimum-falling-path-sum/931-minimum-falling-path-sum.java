@@ -6,7 +6,7 @@ class Solution {
         for(int i = 0; i < len;i++)
             dp[0][i] = matrix[0][i];//intialize
         
-        for(int i = 1;i < len;i++){
+        for(int i = 1;i < len;i++){// fill table
             for(int j = 0;j < len;j++){
                 if(j == 0)
                     dp[i][j] = matrix[i][j] + Math.min(dp[i-1][j],dp[i-1][j+1]);
