@@ -1,5 +1,6 @@
 class Solution {
     public int minimumTotal(List<List<Integer>> triangle) {
+        // we will update each element in triangel with the sum of min(row-1,col and row-1,col-1) and (row,col) therefore we get the minimum value at the end when we take the minimum value out from the last row.
         for(int i = 1;i < triangle.size();i++){
             for(int j = 0;j <= i;j++){
                 int small = Integer.MAX_VALUE;
