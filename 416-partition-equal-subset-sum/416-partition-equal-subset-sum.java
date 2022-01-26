@@ -5,7 +5,7 @@ class Solution {
             sum += i;
         if(sum %2 != 0)
             return false;
-        // if sum is not divisible b y 2 then return false;
+        // if sum is not divisible by 2 then return false;
         sum = sum/2;
         boolean[] dp = new boolean[sum+1];
         dp[0] = true;
