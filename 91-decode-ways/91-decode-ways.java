@@ -7,7 +7,7 @@ class Solution {
         dp[0] = 1;
         // intialize with 1 since if there is one one charater in string then we return 1
         dp[1] = s.charAt(0) != '0' ? 1 : 0;
-        // intialize with 1, if the second character is not 0 then our length becomes 1 for this char
+        // intialize with 1, if the first character is not 0 then our length becomes 1 for this char
         for(int i = 2; i < dp.length;i++){
             int one = Integer.valueOf(s.substring(i-1,i));
             int two = Integer.valueOf(s.substring(i-2,i));
