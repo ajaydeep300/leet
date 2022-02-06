@@ -19,6 +19,8 @@ class Solution {
         Stack<TreeNode> st = new Stack<>();
         if(root == null) return ret;
         st.push(root);
+        // we traverse from the left side and add it to the stack
+        // then we traverse the right side and finally check the root
         while(!st.isEmpty()){
             TreeNode cur = st.pop();
             ret.addFirst(cur.val);
