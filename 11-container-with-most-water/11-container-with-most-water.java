@@ -2,20 +2,17 @@ class Solution {
     public int maxArea(int[] height) {
         int max = 0;
         int area = 0;
-        int h = 0;
-        int left = 0;
-        int right  = (height.length -1);
-        // we use 2 pointers left and rigght at each end
-        // we calculate area by length * breadth where length = right-left and breadth is minimum height among the 2 vertical lines
-        while(left < right){
-            area = (right-left)*(Math.min(height[left],height[right]));
-            if(max < area)
-              max = area;
-            if(height[right] < height[left])
-              right--;
+        int start = 0;
+        int end = height.length -1;
+        while(start < end){
+        area = (end-start)*(Math.min(height[end],height[start]));
+            if(area > max)
+                max = area;
+            else if(height[end] > height[start])
+               start++;
             else
-              left++;
+               end--;
         }
-        return max;       
+        return max;
     }
 }
