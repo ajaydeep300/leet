@@ -18,7 +18,7 @@ class Solution {
         }
         int start = 0;
         int end = count.size() - 1;
-        while(start <= end){
+        while(start < end){
             if(!count.get(start).equals(count.get(end)))
                 return false;
             start += 1;
