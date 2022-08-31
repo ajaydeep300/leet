@@ -5,19 +5,21 @@ class Solution {
         // when all flips are finished, we increment start whereever the value says 0
         // solution by sliding window
         while(end < nums.length){
-            if(nums[end] == 1)
+            if(nums[end] == 1){
                 end++;
-            else if(nums[end] == 0 && z > 0){
+            }
+            else if(nums[end] == 0 && z >0){
                 end++;
                 z--;
             }
             else{
-                max = Math.max(max , end -start);
-                if(nums[start] == 0) z++;
+                max = Math.max(max,end-start);
+                if(nums[start] == 0){
+                    z++;
+                }
                 start++;
             }
-    }
-        max = Math.max(max,end-start);
-        return max;
+        }
+        return Math.max(max,end-start);
 }
 }
